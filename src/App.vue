@@ -37,20 +37,17 @@
         Recognize
       </TabNav>
     </template>
-    <TabContent
-      :show="tab === 'tab1'"
-      id="tab1"
-      aria-labelledby="tab1"
-    ></TabContent>
-    <TabContent
-      :show="tab === 'tab2'"
-      id="tab2"
-      aria-labelledby="tab2"
-    ></TabContent>
+    <TabContent :show="tab === 'tab1'" id="tab1" aria-labelledby="tab1">
+      <Button class="slds-button_outline-brand" rightIcon="#photo">Tab1</Button>
+    </TabContent>
+    <TabContent :show="tab === 'tab2'" id="tab2" aria-labelledby="tab2">
+      <Button class="slds-button_outline-brand" leftIcon="#photo">Tab2</Button>
+    </TabContent>
   </Tabs>
 </template>
 
 <script>
+import Button from "./components/Button";
 import Icon from "./components/Icon";
 import TabContent from "./components/TabContent";
 import TabNav from "./components/TabNav";
@@ -64,6 +61,7 @@ export default {
     };
   },
   components: {
+    Button,
     Icon,
     TabContent,
     TabNav,
