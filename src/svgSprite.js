@@ -1,8 +1,8 @@
-const actionSprite = require("@salesforce-ux/design-system/assets/icons/action-sprite/svg/symbols.svg") as string;
-const customSprite = require("@salesforce-ux/design-system/assets/icons/custom-sprite/svg/symbols.svg") as string;
-const doctypeSprite = require("@salesforce-ux/design-system/assets/icons/doctype-sprite/svg/symbols.svg") as string;
-const standardSprite = require("@salesforce-ux/design-system/assets/icons/standard-sprite/svg/symbols.svg") as string;
-const utilitySprite = require("@salesforce-ux/design-system/assets/icons/utility-sprite/svg/symbols.svg") as string;
+import actionSprite from "@salesforce-ux/design-system/assets/icons/action-sprite/svg/symbols.svg";
+import customSprite from "@salesforce-ux/design-system/assets/icons/custom-sprite/svg/symbols.svg";
+import doctypeSprite from "@salesforce-ux/design-system/assets/icons/doctype-sprite/svg/symbols.svg";
+import standardSprite from "@salesforce-ux/design-system/assets/icons/standard-sprite/svg/symbols.svg";
+import utilitySprite from "@salesforce-ux/design-system/assets/icons/utility-sprite/svg/symbols.svg";
 
 function svgContent(svg) {
   return String(svg || "").replace(/^.*<svg +[^>]+>|<\/svg>.*$/gi, "");

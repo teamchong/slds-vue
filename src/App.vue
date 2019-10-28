@@ -1,12 +1,12 @@
 <template>
-  <Tabs id="app" v-model="tab">
+  <Tabs id="app">
     <template #navs>
       <TabNav
         id="tab1"
         title="Upload"
         tabindex="0"
-        :tab="tab"
-        :switchTab="switchTab"
+        :show="tab === 'tab1'"
+        :switchTab="() => (tab = 'tab1')"
         :anchorProps="{ id: 'tab1__item', 'aria-controls': 'tab1' }"
       >
         <span class="slds-tabs__left-icon">
@@ -22,8 +22,8 @@
       <TabNav
         id="tab2"
         title="Recognize"
-        :tab="tab"
-        :switchTab="switchTab"
+        :show="tab === 'tab2'"
+        :switchTab="() => (tab = 'tab2')"
         :anchorProps="{ id: 'tab2__item', 'aria-controls': 'tab2' }"
       >
         <span class="slds-tabs__left-icon">
@@ -62,11 +62,6 @@ export default {
     return {
       tab: "tab1"
     };
-  },
-  methods: {
-    switchTab(tab) {
-      this.tab = tab;
-    }
   },
   components: {
     Icon,

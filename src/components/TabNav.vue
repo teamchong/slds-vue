@@ -8,9 +8,9 @@
       href="javascript:void(0);"
       role="tab"
       tabindex="-1"
-      aria-selected="show?'true':'false'"
+      aria-selected="show ? 'true' : 'false'"
       v-bind="anchorProps"
-      @click="handleClick"
+      @click="switchTab"
     >
       <slot></slot>
     </a>
@@ -20,21 +20,10 @@
 <script>
 export default {
   name: "TabNav",
-  methods: {
-    handleClick() {
-      this.switchTab(this.id);
-    }
-  },
   props: {
-    id: String,
-    tab: String,
+    show: Boolean,
     switchTab: Function,
     anchorProps: Object
-  },
-  computed: {
-    show() {
-      return this.id === this.tab;
-    }
   }
 };
 </script>

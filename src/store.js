@@ -6,7 +6,7 @@ Vue.use(Vuex);
 // root state object.
 // each Vuex instance is just a single state tree.
 const state = {
-  tab: "tab1",
+  /*tab: "tab1",*/
   count: 0
 };
 
@@ -16,9 +16,9 @@ const state = {
 // mutations must be synchronous and can be recorded by plugins
 // for debugging purposes.
 const mutations = {
-  switchTab(state, tab) {
+  /*switchTab(state, tab) {
     state.tab = tab;
-  }
+  }*/
 };
 
 // actions are functions that cause side effects and can involve
